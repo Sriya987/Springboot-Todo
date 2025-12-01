@@ -1,0 +1,14 @@
+package com.sriya.mockito.demo.business;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class SomeBusinessImpTest {
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.sriya.springboot.first_rest_api.hello_world;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HelloWorld {
+	@RequestMapping("/hello")
+	public static String Hello(){
+		return "Hello";
+	}
+}

@@ -1,0 +1,45 @@
+package com.sriya.springboot.first_rest_api.survey;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+import java.util.function.Predicate;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class SurveyService {
+	private static List<Survey> surveys=new ArrayList<>();
+	static {
+		Question Question1 = new Question("Question1",
+		        "Most Popular Cloud Platform Today", Arrays.asList(
+		                "AWS", "Azure", "Google Cloud", "Oracle Cloud"), "AWS");
+		Question Question2 = new Question("Question2",
+		        "Fastest Growing Cloud Platform", Arrays.asList(
+		                "AWS", "Azure", "Google Cloud", "Oracle Cloud"), "Google Cloud");
+		Question Question3 = new Question("Question3",
+		        "Most Popular DevOps Tool", Arrays.asList(
+		                "Kubernetes", "Docker", "Terraform", "Azure DevOps"), "Kubernetes");
+
+		List<Question> Questions = new ArrayList<>(Arrays.asList(Question1,
+		        Question2, Question3));
+
+		Survey survey = new Survey("Survey1", "My Favorite Survey",
+		        "Description of the Survey", Questions);
+
+		surveys.add(survey);
+	}
+	public List<Survey> retrieveAllSurveys() {
+		// TODO Auto-generated method stub
+		return surveys;
+	}
+	public Survey retrieveSurveyById(String surveyId) {
+		// TODO Auto-generated method stub
+		Predicate<? super Survey> predicate=
+				survey -> survey.getId()==surveyId;
+		Optional<Survey> optionalSurvey=surveys.stream().filter(predicate).findAny();
+		if (optionalSurvey.isEmpty()) return null;
+		return null;
+	}
+}

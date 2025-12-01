@@ -1,0 +1,24 @@
+package com.sriya.mockito.demo.business;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class SomeBusinessMockTest {
+
+	@Test
+	void findGreatestTest() {
+		DataServiceStub mock= mock(DataService.class);
+		SomeBusinessImpl business=new SomeBusinessImpl(stub);
+		int res=business.findGreatest();
+		assertEquals(25,res);
+	}
+
+}
+class DataServiceStub implements DataService{
+	
+	@Override
+	public int[] retrieveAllData(){
+		return new int[]{25,15,5};
+	}
+}

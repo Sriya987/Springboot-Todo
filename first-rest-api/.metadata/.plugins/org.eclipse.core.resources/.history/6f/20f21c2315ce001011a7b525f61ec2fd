@@ -1,0 +1,36 @@
+package com.sriya.springboot.first_rest_api.survey;
+
+import java.util.List;
+
+public class question {
+	public question() {
+		
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public List<String> getOptions() {
+		return options;
+	}
+
+	public String getCorrectAnswer() {
+		return correctAnswer;
+	}
+	
+	private String id;
+	private String description;
+	private List<String> options;
+	private String correctAnswer;
+	
+	@Override
+	public String toString() {
+		return "question [id=" + id + ", description=" + description + ", options=" + options + ", correctAnswer="
+				+ correctAnswer + "]";
+	}
+}

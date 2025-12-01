@@ -1,0 +1,8 @@
+package com.sriya.springboot.first_rest_api.survey;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SurveyService {
+	private static List<Survey> surveys=new ArrayList<>();
+}

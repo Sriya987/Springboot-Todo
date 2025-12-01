@@ -1,0 +1,5 @@
+package com.sriya.mockito.demo.business;
+
+public class SomeBusinessImpl {
+
+}
