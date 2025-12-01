@@ -1,8 +1,0 @@
-package com.sriya.springboot.first_rest_api.user;
-import org.hibernate.mapping.List;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.PagingAndSortingRepository;
-
-public interface UserDetailsRepository extends PagingAndSortingRepository<UserDetails,Long>{
-	List<UserDetails> findByRole(String role);
-}
