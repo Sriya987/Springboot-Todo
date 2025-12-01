@@ -1,5 +1,0 @@
-package com.sriya.understandJPA.demo.course.jdbc;
-
-public class CourseJdbcCommandLineRunner {
-
-}
